@@ -1,4 +1,20 @@
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+IConfigurationRoot appConfig = new ConfigurationBuilder()
+             .SetBasePath(Directory.GetCurrentDirectory())
+             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+             .Build();
+
+builder.Services.AddDbContext<ApplicationContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlServerOptionsAction: sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure();
+        }));
+
 
 // Add services to the container.
 
