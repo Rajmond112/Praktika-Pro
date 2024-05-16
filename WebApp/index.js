@@ -51,6 +51,6 @@ applyButton.addEventListener('mouseover', () => {
 
 // change display to 'none' on mouseleave
 applyButton.addEventListener('mouseleave', () => {
-  tooltip2.style.display = 'none';
+  tooltip2.style.display = 'block';
 }, false);
 
