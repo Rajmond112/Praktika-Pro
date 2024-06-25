@@ -1,2 +1,7 @@
 .vs/
-obj/
+**/[Bb]in/
+[Dd]debug/
+x64
+[Rr]elease/
+**/[Oo]bj/
+build

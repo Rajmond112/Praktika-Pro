@@ -1,0 +1,128 @@
+html {
+	height: 100%;
+	width: 100%;
+	font-family:font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.container {
+	height: calc(100% - 40px);
+}
+
+.login-form-container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center	;
+}
+
+footer {
+  height: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-box {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.container-box img {
+    width: 69px;
+    height: 60;
+    margin-bottom: 20px;
+}
+
+.container-box h1 {
+    font-size: 24px;
+    color: #1c1c1e;
+    margin-bottom: 40px;
+    text-align: center; /* Ez szükséges, ha a h1 tartalma több soros */
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d1d6;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #1c1c1e;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  padding-right: 50px; /* Make space for the arrow button */
+}
+.form-group input:focus {
+  border-color: #007aff;
+  outline: none;
+}
+.form-group label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: white;
+  padding: 0 5px;
+  color: #7d7d7d;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #007aff;
+}
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 1px solid #007aff;
+  border-radius: 50%;
+  color: #007aff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.arrow-button:hover {
+  background-color: #007aff;
+  color: white;
+}
+.login-button {
+  width: 66%;
+  padding: 12px;
+  background: linear-gradient(135deg, #007aff, #005bb5);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+}
+.login-button:hover {
+  background: linear-gradient(135deg, #005bb5, #003f8a);
+}
+.forgot-password {
+  margin-top: 20px;
+  color: #007aff;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}

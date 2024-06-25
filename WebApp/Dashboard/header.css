@@ -1,0 +1,27 @@
+
+.topnav {
+	background-color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.topnav a {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  float: middle;
+  color: black;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: mediumpurple;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid black; /* Aláhúzás */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}

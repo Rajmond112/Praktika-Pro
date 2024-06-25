@@ -177,4 +177,3 @@ xhr9.onload = () => {
     console.log(`Error: ${xhr9.status}`);
   }
 };
-

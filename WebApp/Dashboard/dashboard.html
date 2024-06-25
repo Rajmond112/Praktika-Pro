@@ -1,25 +1,45 @@
 <html>
-<head>
-	<title> 2 gomb </title>
-	<link rel="stylesheet" type="text/css" href="dashboard.css" />
 
-</head>
-	
+<link rel="stylesheet" type="text/css" href="dashboard.css" />
+<link rel="stylesheet" type="text/css" href="header.css" />
+<link rel="stylesheet" type="text/css" href="footer.css" />
 
+<div>
+
+
+<div class="topnav" id="header-part">
+    <a class="" href="../index.html">Log out</a>
+    <a class="active">Dashboard</a>
+    <a class="clock" href="Statistics/statistics.html">Clock</a>
+</div>
+    
+</div>
 <body>
-	<div class="container">
-		dashboard
-	</div>
-	<div>
-	<a href="Statistics/statistics.html"> <button id="statisticsButton">Statistics</button> </a>
-	</div>
+    <div class="container">
+        <h2>User informations</h2>
 
-	<div>
-		<a href="../index.html"> <button id="indexButton">Here we go again</button></a>
-	</div>
-
+        <div class="tbl-container">
+            <table class="table" id=userTable>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Dc_name</th>
+                        <th>Steam_name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Az adatok ide kerülnek betöltésre -->
+                </tbody>
+            </table>
+        </div>   
+    </div>
 </body>
-<script src="dashboard.js"></script>
 
+<footer>
+    <p>Made by me personally</p>
+</footer>
+
+<script src="dashboard.js"></script>
 
 </html>

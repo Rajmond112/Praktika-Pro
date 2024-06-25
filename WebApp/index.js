@@ -1,56 +1,22 @@
-console.log("Main page loaded");
+function showPasswordInput() {
+  const appleId = document.getElementById('apple-id').value;
+  if (appleId) {
+    document.getElementById('password-group').style.display = 'block';
+    document.getElementById('apple-id').disabled = true;
+    document.querySelector('.arrow-button').style.display = 'none';
+    document.querySelector('.login-button').style.display = 'block';
+    document.getElementById('password').focus();
+  } else {
+    alert('Please enter your Username.');
+  }
+}
 
-var applyButton = document.querySelector("#apply");
+function login() {
+  const password = document.getElementById('password').value;
+  if (password) {
+    window.location.href = 'dashboard/dashboard.html'; // Redirect to the dashboard page
 
-var paragraph1 = document.querySelector("#paragraph1");
-
-var input = document.querySelector("#input");
-
-
-applyButton.addEventListener("click", function (e) {
-  console.log("Buttons clicked" , input.value)
-
-	paragraph1.textContent = input.value;
-});
-
-
-
-
-var resetButton = document.querySelector("#reset");
-
-resetButton.addEventListener("click", function (e) {
-  console.log("second Button clicked")
-  paragraph1.textContent = "Cserelj ki";
-  input.value = "";
-
-});
-
-
-
-resetButton.addEventListener("mouseover", function (e) {
-  console.log("second button hover",e)
-});
-
-// selecting the elements for which we want to add a tooltip
-const tooltip = document.getElementById("tooltip-text");
-const tooltip2 = document.getElementById("tooltip-text2");
-
-// change display to 'block' on mouseover
-resetButton.addEventListener('mouseover', () => {
-  tooltip.style.display = 'block';
-}, false);
-
-// change display to 'none' on mouseleave
-resetButton.addEventListener('mouseleave', () => {
-  tooltip.style.display = 'none';
-}, false);
-
-applyButton.addEventListener('mouseover', () => {
-  tooltip2.style.display = 'block';
-}, false);
-
-// change display to 'none' on mouseleave
-applyButton.addEventListener('mouseleave', () => {
-  tooltip2.style.display = 'block';
-}, false);
-
+  } else {
+    alert('Please enter your password.');
+  }
+}

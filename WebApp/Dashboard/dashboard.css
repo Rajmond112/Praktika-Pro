@@ -1,88 +1,91 @@
+html {
+	height: 100%;
+	width: 100%;
+	font-family:font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+}
+
 body {
-	font-size: 16px;
-	font-family: arial;
-
-}
-
-.container-title {
-	text-align: center;
-	color: red;
-	background: #0e2626;
-
-}
-
-.container-input { 
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-}
-
-.buttons {
-	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 50px;
-    padding: 20px;
-}
-
-.container .container-title, 
-.container .container-input,
-.container .buttons 
-.container .container-text {
-	border: 2px solid blue ;
-	margin: 10px;
+	margin: 0px;
 }
 
 .container {
-	border: 1px dashed black;
-	padding: 10px;
+	height: calc(100% - 40px);
 }
 
-/* this is a _demo_ container. remember the importance of relative and absolute positioning */
-.tooltip-container {
-    position: relative;
-    display: flex;
-    place-content: center;
+.container th {
+	font-weight: bold;
+	font-size: 1em;
+	text-align: left;
+	color: whitesmoke;
+
 }
 
-/* styling of the tooltip display */
-p#tooltip-text, p#tooltip-text2 {
-    display: none;
-    position: absolute;
-    top: -60px;
-    z-index: 1;
-    background: #00732c;
-    padding: 8px;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 2px;
-    animation: fadeIn 0.6s;
+.tbl-container {
+	height: 500px;
+	overflow: auto;
 }
 
-/* optional styling to add a "wedge" to the tooltip */
-p#tooltip-text:before, p#tooltip-text2:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -8px;
-  border: 8px solid transparent;
-  border-top: 8px solid #00732c;
+.table td{
+	color: aqua;
+	font-weight: normal;
+	font-size: 1em;
+	-webkit-box-shadow:0 2px 2px-2px #0E1119;
+	-moz-box-shadow:0 2px 2px -2px #0E1119;
+	box-shadow: 0 2px 2px -2px #0E1119;
+
+}
+.table{
+	height: 100%;
+	text-align: left;
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+	display: table;
+
+}
+.table td, .table th{
+	padding-bottom: 2%;
+	padding-top: 2%;
+	padding-left: 2%;
+
+}
+/*Background-color of the odd rows */
+.table tr:nth-child(odd){
+	background-color: #323C50;
+
+}
+/*Background-color of the even rows*/
+.table tr:nth-child(even){
+	background-color: #2C3446;
+}
+.table th{
+	background-color: #1F2739;
+
+}
+.table td:first-child{color: #FB667A;}
+
+.table tr:hover{
+	background-color: #464A52;
+	-webkit-box-shadow:0 6px 6px -6px #0E1119;
+	-moz-box-shadow:0 6px 6px -6px #0E1119;
+	box-shadow: 0 6px 6px -6px #0E1119;
 }
 
-@keyframes fadeIn {
- from {
-   opacity: 0;
- }
- to {
-   opacity: 1;
- }
+.table td:hover{
+	background-color: #FFF842;
+	color: #403E10;
+	font-weight: bold;
+	box-shadow: #7F7C21 -1px  1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+	transform: translate3d(6px, -6px, 0);
+	transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+	transition-timing-function: line;
 }
+@media(max-width: 800px){
+	.table td:nth-child(4),
+	.table th:nth-child(4){display: none;}
 
-.container-text {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10%;
+	}
 }
